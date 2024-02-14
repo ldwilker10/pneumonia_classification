@@ -91,7 +91,8 @@ Recommendations:
 
 ## Limitations
 - Small sample size: With more data and more images to analyze, a more robust model could be utilized to increased accuracy.
-- Run time/ Model complexity: As model complexity increases, this does increase the requirmeent for computation power and can increase model run times. 
+
+- Run time/ Model complexity: As model complexity increases, this does increase the requirement for computation power and can increase model run times. 
 
 
 ## Contact Information
