@@ -5,7 +5,7 @@
 
 
 #### Project by: Lucas Wilkerson
-#### Date: 
+#### Date: 2/21/2024 
 
 ## Project Overview
 For this project, the aim is to build a model for image classification that can classify whether a patient has pneumonia when provided a chest x-ray image. 
@@ -21,7 +21,7 @@ For this project, the aim is to build a convolution neural network (CNN)  model 
 - Test (624 images): data used for testing and evaluating the model's performance 
 - Validation (16 images): data used during the training process to help tune the model
 
-![image](link)
+![image](https://github.com/ldwilker10/phase4_project/blob/main/images/train_set_distribution.png)
 
 ## Data Preparation 
 
@@ -39,52 +39,46 @@ The data was also subsampled for the modeling process to allow for shorter compu
 
 
 
-
 ## Modeling 
 
-Baseline Model: The initial baseline model was a simple neural network model with ____
+Baseline Model: The initial baseline model was a simple convalutional neural network model. The basic architecture comprises convolutional layers with increasing filters, followed by max-pooling layers to capture features. Flattened outputs are fed through dense layers. The model is compiled with binary cross-entropy loss and trained for ten epochs using training and validation data, enabling it to learn and enhance its classification capabilities over time. The main metrics used to evaluate model performance included accuracy and recall. Overall the baseline model performance was not the best. 
 
-
-Convolutional Neural Network Model:
+The baseline model was iterated over multiple times by adjusted different parameters and applying different techniques such as regularization, adjusting learning rate and adding complexity by increasing filters. 
 
 
 ## Evaluation
 ### Best Model Results 
 
-Looking at the modeling and models built, overall the baseline model seemed to perform the best when accounting for all metrics. With the baseline CNN model test accuracy was highest at ~84% with a test recall at ~ 84%. Train accuracy was at ~90% and train recall at ~87%. While these are slightly higher than the test metrics showing slight overfitting, this was more ideal than other models which were showing signs of higher degrees of overfitting and lower performance on test sets.
-
-- Test Loss: 0.4282
-- Test Accuracy: 0.8365
-- Test Recall: 0.8359
-- Train Loss: 0.2443
-- Train Accuracy: 0.8984
-- Train Recall: 0.8684
+Looking at the best model, it had the same initial architecture as the baseline model with adjustments made to the learning rate and to number of filters in the convalutional layers. Learning rate was adjust to 0.001 and filter numbers were doubled compared to the baseline model. 
 
 
-
-| Metric                  | Baseline                          | CNN Model                         |
+| Metric                  | Baseline                          | Best Model                        |
 |-------------------------|-----------------------------------|-----------------------------------|
-| Train Accuracy          | 0.8984                            | 0.                                |
-| Test Accuracy           | 0.8365                            | 0.                                |
-| Train Loss              | 0.2443                            | 0.                                |
-| Test Loss               | 0.4282                            | 0.                                |
-| Train Recall            | 0.8684                            | 0.                                |
-| Test Recall             | 0.8359                            | 0.                                |
+| Train Accuracy          | 0.8111                            | 0.8773                            |
+| Test Accuracy           | 0.7500                            | 0.8221                            |
+| Train Loss              | 0.4179                            | 0.2917                            |
+| Test Loss               | 0.6010                            | 0.5218                            |
+| Train Recall            | 0.7510                            | 0.8348                            |
+| Test Recall             | 0.6513                            | 0.8103                            |
 
 
 ### Regarding the Best Model Scores:
+
 Metrics of focus
-- Recall score, accuracy 
+- Recall score: 0.8103
+- Accuracy: 0.8221
 
-Accuracy: The model's overall accuracy score was 0.8365 which indicates that out of all the times that the model correctly labeled ~84% of the chest x-ray images that were observed in the test group.
+Accuracy: The model's overall accuracy score was 0.8221 which indicates that the model correctly labeled ~82% of the chest x-ray images that were observed in the test group.
 
-Recall: The model's overall recall score was 0.8359 which means that out of all of the individuals/patients that actually had pneumonia, the model correctly identified ~84% of those. 
+Recall: The model's overall recall score was 0.8103 which means that out of all of the individuals/patients that actually had pneumonia, the model correctly identified ~81% of those.
  
+Example of image with Pneumonia
 
-![image](link)
+![image](https://github.com/ldwilker10/phase4_project/blob/main/images/pne_image.png)
 
+Example of image without Pneumonia
 
-![image](link)
+![image](https://github.com/ldwilker10/phase4_project/blob/main/images/no_pne_image.png)
 
 
 ## Conclusion/ Recommendations 
@@ -92,18 +86,18 @@ Recall: The model's overall recall score was 0.8359 which means that out of all 
 
 Recommendations: 
 
-- Healthcare providers should utilize this model as a tool for early pneumonia detection. While this model is not an official diagnostic tool for penuamonia, this model is useful for early detecton and screening. 
+- Healthcare providers should utilize this model as a tool for early pneumonia detection. While this model is not an official diagnostic tool for penuamonia, this model is useful for early detecton and screening and can be cross-reference with professional physician observations.  
 
 - Using this model, practitioner's can implement preventative health strategies to their patient population early on before disease progression and improve overall health outcomes. 
 
-- In the context of identifying pneumonia. 
-
 
 ## Limitations
-- Small sample size: With more data and more images to analyze, a more robust model could be utilized to increased accuracy.
+
+- False positives: With recall, there is the chance for more false positive results (individuals being classified as having pneumonia who in fact do not). While this can be a limitation at times, this is not a huge hinderance in this context because we would rather correctly identify positive cases than to not identify someone with pneumonia and they get left untreated. 
 
 - Run time/ Model complexity: As model complexity increases, this does increase the requirement for computation power and can increase model run times. 
 
+- Small sample size: With more data and more images to analyze, a more robust model could be utilized to increased accuracy.
 
 ## Contact Information
 
