@@ -113,5 +113,5 @@ Recommendations:
 ├── images   
 ├── .gitignore                                                                                                                   
 ├── [README.md](https://github.com/ldwilker10/phase4_project/blob/main/README.md)                                          
-├── [pneumonia_classification_final_notebook.ipynb](link)       
-└── [pneumonia_image_classification_slides.pdf](link)   
+├── [pneumonia_classification_final_notebook.ipynb](https://github.com/ldwilker10/phase4_project/blob/main/pneumonia_classification_final_notebook.ipynb)       
+└── [pneumonia_image_classification_slides.pdf](https://github.com/ldwilker10/phase4_project/blob/main/pneumonia_image_classification_slides.pdf)   
