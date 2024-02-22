@@ -109,7 +109,8 @@ Recommendations:
 
 ## Repository Structure
 
-├── chest_xray                                                                                                                                 ├── draft_models     
+├── chest_xray                                                                                                                                    
+├── draft_models     
 ├── images   
 ├── .gitignore                                                                                                                   
 ├── [README.md](https://github.com/ldwilker10/phase4_project/blob/main/README.md)                                          
