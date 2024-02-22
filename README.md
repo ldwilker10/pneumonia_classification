@@ -1,7 +1,7 @@
 # phase4_project
 # Pneumonia Identification using Image Classification: Phase4_Project
 
-![image](link)
+![image](https://github.com/ldwilker10/phase4_project/blob/main/images/dr_lungs_image.jpeg)
 
 
 #### Project by: Lucas Wilkerson
@@ -109,7 +109,8 @@ Recommendations:
 
 ## Repository Structure
 
-├── chest_xray    
+├── chest_xray
+├── draft_models    
 ├── images   
 ├── .gitignore                                                                                                                   
 ├── [README.md](https://github.com/ldwilker10/phase4_project/blob/main/README.md)                                          
