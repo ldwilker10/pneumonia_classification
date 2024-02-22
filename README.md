@@ -13,21 +13,31 @@ For this project, the aim is to build a model for image classification that can 
 ## Business Problem/Stakeholder
 A healthcare physician group is looking to improve their patient outcomes, specifically patients who are being diagnosed with pneumonia. Pneumonia is a significant health concern among patients, especially geriatric and pediatric patients. For effective treatment and the best possible outcomes, early detection and diagnosis is crucial. Current methods for diagnosing pneumonia can be time-consuming and can be prone to error. Through the development and use of method such as image classification and deep learning, we may be able to improve this process which can lead to an increase in early accurate identification and as a result improve patient outcomes.
 
-
 ## Data Understanding 
 
-The dataset used for this project contains chest X-ray images from pediatric patients with or without pneumonia who are ages one to five. The dataset is already separated and organized into three groups, the train, test and validation groups. Looking at the whole dataset, there is a total of 5856 images. The training set contains 5216 images, the validation set contains 16 images and the test set contains 624 images. 
+For this project, the aim is to build a convolution neural network (CNN)  model for image classification that can classify whether a patient has pneumonia when provided a chest x-ray image. A Kaggle dataset containing 5856 chest x-ray images was utilized to construct this model. The chest X-ray images were from pediatric patients with or without pneumonia who are ages one to five and were split into 3 separate datasets: 
 
-- Train: The training set has 3875 images labeled with pneumonia while having 1341 labeled as normal/without pneumonia. This image set seems to have an imbalanced class distribution since there are a long more images with pneumonia. This class imbalance could affect the model's performance and ability to generalize over the data so this will be addressed in the modeling process through data augmentation adn balancing the class weights. 
-  
-- Test: The test set has 390 images labeled with pneumonia while having 234 labeled as normal/without pneumonia. This image appears to have a more balanced distribution in comparison to the training set. Even though the the pneumonia images count is still higher than the images without pneumonia, the difference is not as vast as the training set.
-  
-- Validation: The validation set has small number of images for both classes with 8 images labeled with pneumonia while having 8 labeled as normal/without pneumonia.
-
-
-
+- Train (5216 images): data used for training the model
+- Test (624 images): data used for testing and evaluating the model's performance 
+- Validation (16 images): data used during the training process to help tune the model
 
 ![image](link)
+
+## Data Preparation 
+
+Before building the model, the data underwent several preprocessing steps including:
+- Data distribution analysis to understand the class balance or imbalance
+- Visualizing sample images to get a visual sense of the data
+- Checking the image dimensions to ensure they were suitable for the model.
+
+During data preparation and preprocessing: 
+- ImageDataGenerator from Keras was used for data augmentation to increase class diversity
+- All images were rescaled and normalized to the range [0,1]
+- Class imbalance was accounted for by balancing class weights
+
+The data was also subsampled for the modeling process to allow for shorter computation run times. Twenty percent of the data was used for training. 
+
+
 
 
 ## Modeling 
