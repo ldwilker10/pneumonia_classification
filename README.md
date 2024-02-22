@@ -1,5 +1,4 @@
-# phase4_project
-# Pneumonia Identification using Image Classification: Phase4_Project
+# Pneumonia Identification using Image Classification: 
 
 ![image](https://github.com/ldwilker10/phase4_project/blob/main/images/dr_lungs_image.jpeg)
 
@@ -114,5 +113,5 @@ Recommendations:
 ├── images   
 ├── .gitignore                                                                                                                   
 ├── [README.md](https://github.com/ldwilker10/phase4_project/blob/main/README.md)                                          
-├── [pneumonia_image_classification.pdf](link)       
-└── [phase4_final_notebook.ipynb](link)  
+├── [pneumonia_classification_final_notebook.ipynb](link)       
+└── [pneumonia_image_classification_slides.pdf](link)   
